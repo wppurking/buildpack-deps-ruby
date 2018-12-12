@@ -64,7 +64,7 @@ RUN gem install bundler --version "$BUNDLER_VERSION"
 
 # install nodejs
 ENV PATH /nodejs/bin:$PATH
-RUN mkdir /nodejs && curl -s https://nodejs.org/dist/v8.11.1/node-v8.11.1-linux-x64.tar.gz | tar xvzf - -C /nodejs --strip-components=1 \
+RUN mkdir /nodejs && curl -s https://nodejs.org/dist/v10.14.2/node-v10.14.2-linux-x64.tar.gz | tar xvzf - -C /nodejs --strip-components=1 \
     && npm i -g yarn
 
 # clean up apt
